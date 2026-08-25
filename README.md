@@ -14,6 +14,7 @@ The project uses the Gemini API to extract information from the resume and then 
 - HTML
 - CSS
 
+
 ## Project Workflow
 resume.txt → Python validation and cleaning → Gemini API → structured JSON → Pydantic validation → template.html + style.css → portfolio.html
 
