@@ -1,0 +1,53 @@
+ARYAN MALHOTRA
+
+Data Scientist | Backend Developer | Cloud Enthusiast
+
+ABOUT
+Final-year Computer Science student specializing in Data Science and scalable backend systems. Passionate about turning complex data into actionable insights and building robust APIs.
+
+EDUCATION
+
+Bachelor of Technology in Computer Science
+Indian Institute of Technology (IIT)
+2022 - 2026
+
+TECHNICAL SKILLS
+
+Programming: Python, SQL, Java, C++
+Data Science: Scikit-learn, TensorFlow, PyTorch, OpenCV
+Backend: FastAPI, Django, PostgreSQL, Redis
+Tools: AWS, Docker, Kubernetes, Terraform, Git
+
+PROJECTS
+
+NeuralStock Predictor
+An AI-powered stock market forecasting tool using LSTM networks to predict price trends with 87% accuracy.
+Technologies: Python, TensorFlow, Pandas, AlphaVantage API
+
+Scale-Commerce Backend
+A microservices-based e-commerce backend capable of handling 5000+ concurrent requests.
+Technologies: FastAPI, PostgreSQL, Docker, Redis
+
+EXPERIENCE
+
+Data Science Intern
+Tech-Vision Labs
+2024 - Present
+Developed computer vision models for automated quality inspection, reducing manual effort by 40%.
+
+CERTIFICATIONS
+
+Google Professional Data Engineer
+Google Cloud
+2025
+
+ACHIEVEMENTS
+
+Global Rank 450 in LeetCode Weekly Contest.
+Winner of National Level AI Hackathon 2024.
+
+CONTACT
+
+Email: aryan.malhotra@email.com
+LinkedIn: https://linkedin.com/in/aryan-malhotra
+GitHub: https://github.com/aryan-malhotra

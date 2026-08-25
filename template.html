@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.name }} | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="brand">{{ data.name }}</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <span class="role-badge">{{ data.role_badge }}</span>
+        <h1>Hi, I'm {{ data.name }}</h1>
+        <p class="tagline" style="margin: 1rem auto 2rem auto; max-width: 700px; color: var(--text-body);">{{ data.tagline }}</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn-cta">View My Projects</a>
+        </div>
+    </section>
+
+    {% if data.about_bio %}
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-card"><p>{{ data.about_bio }}</p></div>
+    </section>
+    {% endif %}
+
+    <!-- SKILLS SECTION MATCHED TO YOUR PYDANTIC MODEL -->
+    <section id="skills" class="section">
+        <h2>Expertise</h2>
+        <div class="skills-grid">
+            {% for category in data.skill_categories %}
+            <div class="skill-card">
+                <h3>{{ category.category_name }}</h3>
+                <div class="skill-pills">
+                    {% for s in category.skills %}
+                    <span>{{ s }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+        <h2>Featured Work</h2>
+        <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+            {% for project in data.projects %}
+            <div class="project-card">
+                <h3 style="color:var(--primary); margin-bottom:10px;">{{ project.title }}</h3>
+                <p style="font-size:0.95rem; margin-bottom:20px;">{{ project.description }}</p>
+                <div class="skill-pills">
+                    {% for tech in project.technologies %}
+                    <span>{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION (Optional but supported by your main.py) -->
+    {% if data.experience %}
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="about-card" style="padding: 0;">
+            {% for job in data.experience %}
+            <div style="padding: 2rem; border-bottom: 1px solid var(--border-color);">
+                <h3 style="color: var(--text-heading);">{{ job.role }} @ <span style="color: var(--primary);">{{ job.company }}</span></h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">{{ job.dates }}</p>
+                <ul style="padding-left: 1.2rem; font-size: 0.95rem;">
+                    {% for resp in job.responsibilities %}<li>{{ resp }}</li>{% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+</main>
+
+<footer id="contact">
+    <h2>Let's Build Something</h2>
+    <div style="margin-top:2rem">
+        {% if data.contact.email %}
+            <a href="mailto:{{ data.contact.email }}" class="btn-cta" style="margin:10px">Email Me</a>
+        {% endif %}
+        {% if data.contact.linkedin %}
+            <a href="{{ data.contact.linkedin }}" target="_blank" class="btn-cta" style="margin:10px; background:#1e293b">LinkedIn</a>
+        {% endif %}
+    </div>
+    <p style="margin-top:3rem; color:var(--text-muted); font-size:0.8rem;">© 2025 {{ data.name }}</p>
+</footer>
+
+</body>
+</html>
