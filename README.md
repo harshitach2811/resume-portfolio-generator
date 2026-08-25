@@ -1,4 +1,4 @@
-## AI-Assisted Resume Portfolio Generator
+## AI-Assisted Resume Portfolio
 
 ## Project Overview
 This project converts a resume stored in resume.txt into a structured personal portfolio webpage.
