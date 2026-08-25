@@ -102,5 +102,3 @@ See the `screenshots/` folder:
 - Gemini is called from the Python backend only, never from browser-side JavaScript, so the API key is never exposed to the client.
 - Gemini's output is a draft. Every generated skill, project, date, company, achievement, and link should be checked against the original resume before final use.
 
-## AI Usage
-See `AI_USAGE_LOG.md` for a record of the AI tools used during development, what they were used for, and how their output was reviewed and corrected.
