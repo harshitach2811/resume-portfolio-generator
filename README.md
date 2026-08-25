@@ -39,7 +39,19 @@ resume-portfolio-generator/
     03_experience_and_contact.png
 ```
 
+## Setup
+Step 1: Install Python
+Install Python 3.10 or a newer version.
 
+Step 2: Install the required packages
+Open the terminal in the project folder and run:
+pip install -r requirements.txt
+
+Step 3: Add the Gemini API key
+Copy `.env.example` to `.env` in the project folder, then replace the placeholder with your own key:
+GEMINI_API_KEY=your_gemini_api_key
+
+Never commit the real `.env` file — it is already excluded by `.gitignore`.
 
 ## How to Run
 Put the resume information in resume.txt.
